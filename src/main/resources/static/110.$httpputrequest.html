@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+
+    <script src="scripts/index3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index3.css"/>
+
+<body ng-controller="myController">
+<div>
+    Id : <input ng-model="id"/><br/><br/>
+    Name : <input ng-model="name"/><br/><br/>
+    Country : <input ng-model="country"/><br/><br/>
+
+    <input type="button" value="Send" ng-click="postdata(id, name, country)"/> <br/><br/>
+</div>
+
+<div>
+    {{persons}}
+</div>
+</body>
+</html>

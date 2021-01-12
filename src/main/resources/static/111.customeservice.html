@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+    <script src="111.customeservice.js"></script>
+    <script src="111.Stringcustomeservice.js"></script>
+</head>
+
+<body ng-controller="myController">
+
+<table>
+    <tr>
+        <td>Input String</td>
+        <td><input type="text" ng-model="input"></input></td>
+    </tr>
+    <tr>
+        <td>Actual String</td>
+        <td><input type="text" ng-model="output"></input></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="Button" ng-click="transformString(input)" value="Process String"></input></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+
+    <script src="scripts/indexget.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index2.css"/>
+
+<body ng-controller="myController">
+<table class="table table-bordered">
+    <tr>
+        <thead class="one tablecolors">
+        <td ng-click="sortData('id')">ID</td>
+        <td ng-click="sortData('name')">NAME</td>
+        <td ng-click="sortData('country')">COUNTRY</td>
+        </thead>
+
+    </tr>
+    <tbody>
+    <tr ng-repeat="person in persons | orderBy: sortColumn :reverseSort">
+        <td>{{person.id|lowercase}}</td>
+        <td>{{person.name|lowercase}}</td>
+        <td>{{person.country|uppercase}}</td>
+    </tr>
+    <tbody>
+
+
+</table>
+
+</body>
+</html>

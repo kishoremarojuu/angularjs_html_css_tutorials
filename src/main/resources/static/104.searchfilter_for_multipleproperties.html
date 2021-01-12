@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.js"></script>
+    <script src="104.searchfilter_for_multipleproperties.js"></script>
+</head>
+<link rel="stylesheet" type="text/css" href="css/104.searchfilter_for_multipleproperties.css"/>
+<body ng-controller="myController">
+<input type="text" placeholder="search name" ng-model="searchText.name"></input>
+<input type="text" placeholder="search city" ng-model="searchText.city"></input>
+<input type="checkbox" ng-model="exactMatch"/> ExactMatch
+<table class="table table-bordered">
+    <tr>
+        <thead class="one tablecolors" style="cursor:pointer">
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Salary</td>
+        <td>City</td>
+
+        </thead>
+    </tr>
+    <tbody>
+    <tr ng-repeat="employee in employees | filter:searchText:exactMatch">
+        <td>{{employee.name}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.city}}</td>
+    </tr>
+    <tbody>
+</table>
+
+</body>
+</html>

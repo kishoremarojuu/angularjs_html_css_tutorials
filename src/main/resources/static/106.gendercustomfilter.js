@@ -1,0 +1,15 @@
+///<reference path="D:/Kishore/programs/5.UI Technologies/2.Angular_JS/programms/106.customfilter.js"/>
+myApp.filter("gender", function () {
+    return function (gender) {
+        switch (gender) {
+            case 1:
+                return "Male";
+            case 2:
+                return "Female";
+            case 3:
+                return "Not Disclosed"
+        }
+    }
+})
+
+
